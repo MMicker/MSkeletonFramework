@@ -1,0 +1,18 @@
+//
+//	\ \  \   / __|  __| __ \  
+// 	 \ \  \ /\__ \ (    |   | 
+//    \_/\_/ ____/\___|_|  _|  
+// 
+//  MSkeletonFramework-Prefix.pch
+//  MSkeletonFramework
+//
+//  Created by micker on 2018/3/13.
+//  Copyright (c) 2018年 Micker. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#endif

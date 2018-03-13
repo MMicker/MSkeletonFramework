@@ -1,0 +1,6 @@
+framework module MSkeletonFramework {
+  umbrella header "MSkeletonFramework.h"
+
+  export *
+  module * { export * }
+}
