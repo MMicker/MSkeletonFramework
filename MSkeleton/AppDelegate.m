@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-//    [MSkeletonConfig sharedInstance].tintColors = @[[UIColor orangeColor]];
+    [MSkeletonConfig sharedInstance].tintColors = @[[UIColor orangeColor]];
     return YES;
 }
 

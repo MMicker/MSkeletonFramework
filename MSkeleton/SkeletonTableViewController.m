@@ -81,7 +81,7 @@
     }
     
     cell.nameLabel.text = self.data[indexPath.row][@"title"];
-    cell.introLabel.text = [NSString stringWithFormat:@"%@ - %@",self.data[indexPath.row][@"title"], @"Skeleton"];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",self.data[indexPath.row][@"title"], @"Skeleton"];
     return cell;
 }
 
@@ -103,12 +103,12 @@
         
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 80, 80)];
         imageView.isSkeletonable = YES;
-        imageView.backgroundColor = [UIColor redColor];
+        imageView.backgroundColor = [UIColor orangeColor];
         [tableViewHeader addSubview:imageView];
         
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 10, 80, 80)];
         imageView.isSkeletonable = YES;
-        imageView.backgroundColor = [UIColor redColor];
+        imageView.backgroundColor = [UIColor orangeColor];
         imageView.layer.cornerRadius = CGRectGetWidth(imageView.bounds)/2.0f;
         imageView.layer.masksToBounds = YES;
         [tableViewHeader addSubview:imageView];

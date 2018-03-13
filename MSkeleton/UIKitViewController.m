@@ -46,12 +46,12 @@
     {
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 360, 80, 80)];
         imageView.isSkeletonable = YES;
-        imageView.backgroundColor = [UIColor redColor];
+        imageView.backgroundColor = [UIColor orangeColor];
         [contentView addSubview:imageView];
 
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 360, 80, 80)];
         imageView.isSkeletonable = YES;
-        imageView.backgroundColor = [UIColor redColor];
+        imageView.backgroundColor = [UIColor orangeColor];
         imageView.layer.cornerRadius = CGRectGetWidth(imageView.bounds)/2.0f;
         imageView.layer.masksToBounds = YES;
         [contentView addSubview:imageView];
