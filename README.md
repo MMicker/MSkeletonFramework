@@ -13,8 +13,8 @@
 
 ##效果图展示
 为更好的展示效果，请耐心等待     
-<img src="https://raw.githubusercontent.com/MMicker/MSkelethonFramework/master/images/detail.gif" width="50%">
-<img src="https://raw.githubusercontent.com/MMicker/MSkelethonFramework/master/images/tbh.jpeg" width="50%">
+<img src="https://raw.githubusercontent.com/MMicker/MSkeletonFramework/master/images/detail.gif" width="50%">
+<img src="https://raw.githubusercontent.com/MMicker/MSkeletonFramework/master/images/tbh.jpeg" width="50%">
 
 ##参数说明
 ```
