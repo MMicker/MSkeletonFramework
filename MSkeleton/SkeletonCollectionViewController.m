@@ -54,7 +54,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+//    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.collectionView];
     

@@ -63,6 +63,7 @@
     if ([originDataSource conformsToProtocol:@protocol(SkeletonTableViewDataSource)] &&
         ![originDataSource isKindOfClass:[SkeletonCollectionDataSource class]])
     {
+        [self setUserInteractionEnabled:NO];
         SkeletonCollectionDataSource *dataSource = [[SkeletonCollectionDataSource alloc] initWithTableViewDataSource:originDataSource
                                                                                                            rowHeight: [self skeletonRowHeight] ];
         self.dataSource = self.skeletonDataSource = dataSource;
@@ -79,6 +80,8 @@
         self.rowHeight = self.skeletonDataSource.rowHeight;
         !reloadAfter?:[self reloadData];
     }
+    
+    [self setUserInteractionEnabled:YES];
 }
 
 - (CGFloat) skeletonRowHeight {
@@ -95,6 +98,7 @@
     if ([originDataSource conformsToProtocol:@protocol(SkeletonCollectionViewDataSource)] &&
         ![originDataSource isKindOfClass:[SkeletonCollectionDataSource class]])
     {
+        [self setUserInteractionEnabled:NO];
         SkeletonCollectionDataSource *dataSource = [[SkeletonCollectionDataSource alloc] initWithCollectionDataSource:originDataSource
                                                                                                             rowHeight:0];
         self.dataSource = self.skeletonDataSource = dataSource;
@@ -110,6 +114,7 @@
         self.skeletonDataSource = nil;
         !reloadAfter?:[self reloadData];
     }
+    [self setUserInteractionEnabled:YES];
 }
 
 @end
