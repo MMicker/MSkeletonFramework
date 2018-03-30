@@ -48,11 +48,11 @@
 }
 
 - (void) enableScrolling {
-    [self setScrollEnabled:YES];
+//    [self setScrollEnabled:YES];
 }
 
 - (void) disableScrolling {
-    [self setScrollEnabled:NO];
+//    [self setScrollEnabled:NO];
 }
 @end
 
@@ -78,8 +78,8 @@
         self.dataSource = self.skeletonDataSource.originalTableViewDataSource;
         self.skeletonDataSource = nil;
         self.rowHeight = self.skeletonDataSource.rowHeight;
-        !reloadAfter?:[self reloadData];
     }
+    !reloadAfter?:[self reloadData];
     
     [self setUserInteractionEnabled:YES];
 }
@@ -112,8 +112,9 @@
     {
         self.dataSource = self.skeletonDataSource.originalCollectionViewDataSource;
         self.skeletonDataSource = nil;
-        !reloadAfter?:[self reloadData];
     }
+    !reloadAfter?:[self reloadData];
+    
     [self setUserInteractionEnabled:YES];
 }
 

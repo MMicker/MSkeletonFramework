@@ -52,7 +52,6 @@
 
 @interface MSkeletonLayer()
 
-@property (nonatomic, strong) CALayer *maskLayer;
 @property (nonatomic, weak)   UIView *holder;
 @end
 

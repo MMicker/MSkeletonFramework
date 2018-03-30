@@ -19,18 +19,23 @@ typedef NS_ENUM(NSUInteger, SkeletonType) {
  */
 @interface MSkeletonConfig : NSObject
 
-@property (nonatomic, strong) NSArray *tintColors;      // default is 236,236,236
-@property (nonatomic, assign) SkeletonType type;        // default is solid
-@property (nonatomic, assign) CGFloat multilineHeight;  // default is 20
-@property (nonatomic, assign) CGFloat multilineSpacing; // default is 10
+@property (nonatomic, strong) NSArray *tintColors;          // default is 236,236,236
+@property (nonatomic, assign) SkeletonType type;            // default is solid
+@property (nonatomic, assign) CGFloat multilineHeight;      // default is 20
+@property (nonatomic, assign) CGFloat multilineSpacing;     // default is 10
+@property (nonatomic, assign) CGFloat multilineAllHeight;   // multilineHeight + multilineSpacing
 
 + (instancetype) sharedInstance;
+
+- (CALayer *) layerWithType;
+
+- (CGFloat) multilineAllHeight;
 
 @end
 
 @interface MSkeletonLayer : NSObject
 
-@property (nonatomic, strong, readonly) CALayer *maskLayer;
+@property (nonatomic, strong) CALayer *maskLayer;
 @property (nonatomic, weak, readonly)   UIView *holder;
 
 - (id) initWithHolder:(UIView *) holder;

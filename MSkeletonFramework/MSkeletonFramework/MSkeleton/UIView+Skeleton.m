@@ -52,7 +52,8 @@
 }
 
 - (void) showSkeleton {
-    [self performSelector:@selector(__internalShowSkeleton) withObject:nil afterDelay:0];
+    [self __internalShowSkeleton];
+//    [self performSelector:@selector(__internalShowSkeleton) withObject:nil afterDelay:0];
 }
 
 - (void) __internalShowSkeleton {
@@ -74,9 +75,10 @@
 }
 
 - (void) hideSkeleton:(BOOL) reloadAfter {
+    NSArray *array = self.subviewsSkeletonables;
     [self removeDummyDataSourceIfNeeded:reloadAfter];
     [self setUserInteractionEnabled:YES];
-    [self recursiveSearch:self.subviewsSkeletonables
+    [self recursiveSearch:array
                 leafBlock:^
     {
         [self.skeletonLayer removeLayer];

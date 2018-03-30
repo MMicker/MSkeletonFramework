@@ -40,7 +40,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.originalTableViewDataSource) {
         if ([self.originalTableViewDataSource respondsToSelector:@selector(skeletonTableView:numberOfRowsInSection:)]) {
-            [self.originalTableViewDataSource skeletonTableView:tableView numberOfRowsInSection:section];
+            return [self.originalTableViewDataSource skeletonTableView:tableView numberOfRowsInSection:section];
         } else {
             return CGRectGetHeight(tableView.bounds)/self.rowHeight;
         }
@@ -69,7 +69,7 @@
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (self.originalCollectionViewDataSource) {
         if ([self.originalCollectionViewDataSource respondsToSelector:@selector(skelethonCollectionView:numberOfItemsInSection:)]) {
-            [self.originalCollectionViewDataSource skelethonCollectionView:collectionView numberOfItemsInSection:section];
+            return [self.originalCollectionViewDataSource skelethonCollectionView:collectionView numberOfItemsInSection:section];
         } else {
             if ([collectionView.collectionViewLayout isKindOfClass: [UICollectionViewFlowLayout class]]) {
                 UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *) collectionView.collectionViewLayout;
